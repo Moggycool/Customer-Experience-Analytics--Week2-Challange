@@ -1,223 +1,192 @@
 """
-Data Preprocessing Script
-Task 1: Data Preprocessing
+preprocessing.py
+Review Cleaning & Preprocessing Module
 
-This script cleans and preprocesses scraped Google Play Store review data.
-- Handles missing values
-- Normalizes dates
-- Cleans text data
+This module loads raw scraped Google Play reviews, applies cleaning
+transformations, handles missing values (including rating), computes
+review length, and saves a clean processed dataset for downstream analysis.
 """
 
 import os
 import re
 from datetime import datetime
 import pandas as pd
-
-from src.config import DATA_PATHS  # ✅ Correct import based on folder structure
+from src.config import DATA_PATHS
 
 
 class ReviewPreprocessor:
-    """Preprocessor class for review data"""
+    """Preprocess raw Google Play Store reviews."""
 
-    def __init__(self, input_path=None, output_path=None):
-        self.input_path = input_path or DATA_PATHS['raw_reviews']
-        self.output_path = output_path or DATA_PATHS['processed_reviews']
-        self.df = None
-        self.stats = {}
+    def __init__(self):
+        self.raw_path = DATA_PATHS["raw_reviews"]
+        self.output_path = DATA_PATHS["processed_reviews"]
+        self.df = pd.DataFrame()  # initialize DataFrame
 
-    def load_data(self):
-        """Load raw review data from CSV"""
-        print("Loading raw data...")
+        # Ensure output directory exists
+        os.makedirs(os.path.dirname(self.output_path), exist_ok=True)
+
+    # ----------------------------------------------------------------------
+    # TEXT CLEANING HELPERS
+    # ----------------------------------------------------------------------
+    @staticmethod
+    def clean_text(text: str) -> str:
+        """Clean review text: remove URLs, emoji, normalize spacing."""
+        if not isinstance(text, str):
+            return ""
+
+        text = text.strip().lower()
+
+        # Remove URLs
+        text = re.sub(r"http\S+|www\.\S+", "", text)
+
+        # Remove emoji
+        text = re.sub(
+            r"["
+            u"\U0001F600-\U0001F64F"
+            u"\U0001F300-\U0001F5FF"
+            u"\U0001F680-\U0001F6FF"
+            u"\U0001F700-\U0001F77F"
+            u"\U0001F780-\U0001F7FF"
+            u"\U0001F800-\U0001F8FF"
+            u"\U0001F900-\U0001F9FF"
+            u"\U0001FA00-\U0001FA6F"
+            u"\U0001FA70-\U0001FAFF"
+            "]+",
+            "",
+            text,
+        )
+
+        # Remove special characters except punctuation
+        text = re.sub(r"[^a-zA-Z0-9.,!? ]", " ", text)
+
+        # Normalize spaces
+        text = re.sub(r"\s+", " ", text).strip()
+
+        return text
+
+    @staticmethod
+    def fix_date(date_value):
+        """Convert date field to YYYY-MM-DD or return today's date."""
+        if not isinstance(date_value, str):
+            return datetime.today().strftime("%Y-%m-%d")
         try:
-            self.df = pd.read_csv(self.input_path)
-            print(f"Loaded {len(self.df)} reviews")
-            self.stats['original_count'] = len(self.df)
-            return True
-        except FileNotFoundError:
-            print(f"ERROR: File not found: {self.input_path}")
+            return pd.to_datetime(date_value).strftime("%Y-%m-%d")
+        except Exception:
+            return datetime.today().strftime("%Y-%m-%d")
+
+    # ----------------------------------------------------------------------
+    # MISSING VALUE HANDLING
+    # ----------------------------------------------------------------------
+    @staticmethod
+    def handle_missing(df: pd.DataFrame) -> pd.DataFrame:
+        """Fill missing values with appropriate defaults and report per bank."""
+        banks = df['bank_name'].unique()
+        print("⚠️ Checking and handling missing values per bank...\n")
+        for bank in banks:
+            bank_df = df[df['bank_name'] == bank]
+            total = len(bank_df)
+            for col in ['reply_content', 'review_version', 'rating']:
+                missing_count = bank_df[col].isna().sum()
+                missing_pct = missing_count / total * 100
+                print(f"Bank: {bank} ({total} reviews)")
+                print(
+                    f"  - {col}: {missing_count} missing ({missing_pct:.2f}%)")
+                # Fill missing values
+                if col == 'reply_content':
+                    df.loc[df['bank_name'] == bank,
+                           col] = bank_df[col].fillna("")
+                elif col == 'review_version':
+                    df.loc[df['bank_name'] == bank,
+                           col] = bank_df[col].fillna("N/A")
+                elif col == 'rating':
+                    median_rating = bank_df['rating'].median()
+                    df.loc[df['bank_name'] == bank,
+                           col] = bank_df[col].fillna(median_rating)
+        print()
+        return df
+
+    # ----------------------------------------------------------------------
+    # MAIN PROCESSING LOGIC
+    # ----------------------------------------------------------------------
+    def process(self) -> bool:
+        """Load, clean, handle missing, add text length, and save processed review data."""
+        if not os.path.exists(self.raw_path):
+            print(f"❌ Raw reviews file not found: {self.raw_path}")
             return False
-        except Exception as e:
-            print(f"ERROR: Failed to load data: {e}")
+
+        print(f"📥 Loading raw reviews from {self.raw_path}...")
+        df = pd.read_csv(self.raw_path)
+
+        if df.empty:
+            print("❌ ERROR: Raw reviews file is empty.")
             return False
 
-    def check_missing_data(self):
-        """Check for missing values in the dataset"""
-        print("\n[1/6] Checking for missing data...")
-        missing = self.df.isnull().sum()
-        missing_pct = (missing / len(self.df)) * 100
-
-        print("\nMissing values:")
-        for col, count in missing.items():
-            if count > 0:
-                print(f"  {col}: {count} ({missing_pct[col]:.2f}%)")
-
-        self.stats['missing_before'] = missing.to_dict()
-
-        critical_cols = ['review_text', 'rating', 'bank_name']
-        missing_critical = self.df[critical_cols].isnull().sum()
-
-        if missing_critical.sum() > 0:
-            print("\nWARNING: Missing values in critical columns:")
-            print(missing_critical[missing_critical > 0])
-
-    def handle_missing_values(self):
-        """Handle missing values in the dataset"""
-        print("\n[2/6] Handling missing values...")
-        critical_cols = ['review_text', 'rating', 'bank_name']
-        before_count = len(self.df)
-
-        self.df = self.df.dropna(subset=critical_cols)
-        removed = before_count - len(self.df)
-
-        if removed > 0:
-            print(f"Removed {removed} rows with missing critical values")
-
-        self.df['user_name'] = self.df['user_name'].fillna('Anonymous')
-        self.df['thumbs_up'] = self.df['thumbs_up'].fillna(0)
-        self.df['reply_content'] = self.df['reply_content'].fillna('')
-
-        self.stats['rows_removed_missing'] = removed
-        self.stats['count_after_missing'] = len(self.df)
-
-    def normalize_dates(self):
-        """Normalize and standardize date formats"""
-        print("\n[3/6] Normalizing dates...")
-        try:
-            self.df['review_date'] = pd.to_datetime(
-                self.df['review_date']).dt.date
-            self.df['review_year'] = pd.to_datetime(
-                self.df['review_date']).dt.year
-            self.df['review_month'] = pd.to_datetime(
-                self.df['review_date']).dt.month
-
-            print(
-                f"Date range: {self.df['review_date'].min()} to {self.df['review_date'].max()}"
-            )
-        except Exception as e:
-            print(f"WARNING: Error normalizing dates: {e}")
-
-    def clean_text(self):
-        """Clean and preprocess review text"""
-        print("\n[4/6] Cleaning text...")
-
-        def clean_review_text(text):
-            if pd.isna(text):
-                return ''
-            text = str(text)
-            text = re.sub(r'\s+', ' ', text)
-            return text.strip()
-
-        before_count = len(self.df)
-        self.df['review_text'] = self.df['review_text'].apply(
-            clean_review_text)
-        self.df = self.df[self.df['review_text'].str.len() > 0]
-        removed = before_count - len(self.df)
-
-        if removed > 0:
-            print(f"Removed {removed} reviews with empty text")
-
-        self.df['text_length'] = self.df['review_text'].str.len()
-
-        self.stats['empty_reviews_removed'] = removed
-        self.stats['count_after_cleaning'] = len(self.df)
-
-    def validate_ratings(self):
-        """Validate rating values are within expected range"""
-        print("\n[5/6] Validating ratings...")
-        invalid = self.df[(self.df['rating'] < 1) | (self.df['rating'] > 5)]
-
-        if len(invalid) > 0:
-            print(
-                f"WARNING: Found {len(invalid)} reviews with invalid ratings")
-            self.df = self.df[(self.df['rating'] >= 1) &
-                              (self.df['rating'] <= 5)]
-        else:
-            print("All ratings are valid (1-5)")
-
-        self.stats['invalid_ratings_removed'] = len(invalid)
-
-    def prepare_final_output(self):
-        """Prepare the final output dataset"""
-        print("\n[6/6] Preparing final output...")
-
-        output_columns = [
-            'review_id', 'review_text', 'rating', 'review_date',
-            'review_year', 'review_month', 'bank_code', 'bank_name',
-            'user_name', 'thumbs_up', 'text_length', 'source'
+        # Ensure required fields exist
+        required_cols = [
+            "review_id",
+            "review_text",
+            "rating",
+            "review_date",
+            "bank_code",
+            "bank_name",
+            "source",
+            "reply_content",
+            "review_version"
         ]
-
-        output_columns = [
-            col for col in output_columns if col in self.df.columns]
-        self.df = self.df[output_columns]
-
-        self.df = self.df.sort_values(
-            ['bank_code', 'review_date'], ascending=[True, False]
-        ).reset_index(drop=True)
-
-        print(f"Final dataset: {len(self.df)} reviews")
-
-    def save_data(self):
-        """Save the processed data to CSV"""
-        print("\nSaving processed data...")
-        try:
-            os.makedirs(os.path.dirname(self.output_path), exist_ok=True)
-            self.df.to_csv(self.output_path, index=False)
-            print(f"Data saved to: {self.output_path}")
-            self.stats['final_count'] = len(self.df)
-            return True
-        except Exception as e:
-            print(f"ERROR: Failed to save data: {e}")
+        missing = [c for c in required_cols if c not in df.columns]
+        if missing:
+            print(f"❌ Missing expected columns: {missing}")
             return False
 
-    def generate_report(self):
-        """Generate a preprocessing report"""
-        print("\n" + "=" * 60)
-        print("PREPROCESSING REPORT")
-        print("=" * 60)
+        # Handle missing values
+        df = self.handle_missing(df)
 
-        print(f"\nOriginal records: {self.stats.get('original_count', 0)}")
-        print(f"Final records: {self.stats.get('final_count', 0)}")
+        # Clean text
+        print("🧹 Cleaning review text...")
+        df["clean_text"] = df["review_text"].astype(str).apply(self.clean_text)
 
-        if self.df is not None:
-            print("\nReviews per bank:")
-            print(self.df['bank_name'].value_counts())
+        # Filter: remove empty or too-short reviews
+        df = df[df["clean_text"].str.len() > 5]
 
-    def process(self):
-        """Run the full preprocessing pipeline"""
-        print("=" * 60)
-        print("STARTING DATA PREPROCESSING")
-        print("=" * 60)
+        # Compute text length
+        df["text_length"] = df["clean_text"].str.len()
 
-        if not self.load_data():
-            return False
+        # Fix dates
+        print("📅 Normalizing dates...")
+        df["review_date"] = df["review_date"].apply(self.fix_date)
 
-        self.check_missing_data()
-        self.handle_missing_values()
-        self.normalize_dates()
-        self.clean_text()
-        self.validate_ratings()
-        self.prepare_final_output()
+        # Remove duplicates
+        before = len(df)
+        df = df.drop_duplicates(subset=["review_id", "clean_text"])
+        after = len(df)
+        print(f"🧽 Removed {before - after} duplicate reviews.")
 
-        if self.save_data():
-            self.generate_report()
-            return True
-        return False
+        # Sort by date
+        df = df.sort_values(by="review_date").reset_index(drop=True)
+
+        # Save processed file
+        df.to_csv(self.output_path, index=False)
+        print(f"📁 Processed dataset saved → {self.output_path}")
+
+        self.df = df  # store processed DataFrame
+        return True
 
 
+# ----------------------------------------------------------------------
+# MODULE ENTRY POINT
+# ----------------------------------------------------------------------
 def main():
-    """Main function to run the preprocessor"""
-    preprocessor = ReviewPreprocessor()
-    success = preprocessor.process()
+    """Run preprocessing as a standalone script."""
+    processor = ReviewPreprocessor()
+    success = processor.process()  # returns True/False
 
     if success:
-        print("\n✓ Preprocessing completed successfully!")
-        return preprocessor.df
-
-    print("\n✗ Preprocessing failed!")
-    return None
+        print("\n✅ Preprocessing finished successfully!")
+        return processor.df
+    else:
+        print("\n❌ Preprocessing failed.")
+        return None
 
 
 if __name__ == "__main__":
-    processed_df = main()
-    if processed_df is not None:
-        print(f"\nTotal processed reviews: {len(processed_df)}")
+    main()

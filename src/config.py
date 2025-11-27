@@ -1,41 +1,96 @@
 """
-Configuration file for Bank Reviews Analysis Project
+config.py
+Centralized configuration module for the Google Play Review Scraper project.
+
+This module stores:
+- App IDs for target Ethiopian banks.
+- Folder paths for saving raw, processed, and metadata files.
+- Scraper configuration parameters.
+- General project settings.
+
+All other modules import from here, ensuring a single source of truth.
+
+Usage
+-----
+from src.config import APP_IDS, BANK_NAMES, SCRAPING_CONFIG, DATA_PATHS
 """
-import os
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+from pathlib import Path
 
-# Google Play Store App IDs
+# ============================================================
+# Project Root & Directory Structure
+# ============================================================
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+DATA_DIR = PROJECT_ROOT / "data"
+RAW_DIR = DATA_DIR / "raw"
+PREPROCESSED_DIR = DATA_DIR / "preprocessed"  # matches preprocessing.py
+
+# Ensure directories exist
+for folder in [RAW_DIR, PREPROCESSED_DIR]:
+    folder.mkdir(parents=True, exist_ok=True)
+
+# ============================================================
+# Data Paths Dictionary
+# ============================================================
+
+DATA_PATHS = {
+    "raw_reviews": str(RAW_DIR / "google_play_raw_reviews.csv"),
+    "processed_reviews": str(PREPROCESSED_DIR / "google_play_processed_reviews.csv"),
+    "app_info": str(RAW_DIR / "google_play_app_info.csv"),
+}
+
+# ============================================================
+# Bank App Mapping
+# ============================================================
+
 APP_IDS = {
-    "CBE": os.getenv("CBE_APP_ID", "combanketh.mobilebanking"),
-    "BOA": os.getenv("BOA_APP_ID", "boa.boaMobileBanking"),
-    "DB": os.getenv("DASHEN_APP_ID", "com.dashen.dashensuperapp"),
+    "CBE": "com.combanketh.mobilebanking",
+    "BOA": "com.boa.boaMobileBanking",
+    "DASHEN": "com.dashen.dashensuperapp",
 }
 
 BANK_NAMES = {
     "CBE": "Commercial Bank of Ethiopia",
     "BOA": "Bank of Abyssinia",
-    "DB": "Dashen Bank",
+    "DASHEN": "Dashen Bank",
 }
 
+# ============================================================
 # Scraping Configuration
+# ============================================================
+
 SCRAPING_CONFIG = {
-    "reviews_per_bank": int(os.getenv("REVIEWS_PER_BANK", "400")),
-    "lang": os.getenv("LANG", "en"),
-    "country_fallback": os.getenv("COUNTRY_FALLBACK", "et,us,gb").split(","),
-    "max_retries": int(os.getenv("MAX_RETRIES", "3")),
-    "scraping_delay": float(os.getenv("SCRAPING_DELAY", "2")),
+    "reviews_per_bank": 400,
+    "lang": "en",
+    "country_fallback": ["et", "us", "gb"],
+    "max_retries": 3,
+    "scraping_delay": 2,
 }
 
-# File Paths
-DATA_PATHS = {
-    'raw': 'data/raw',
-    'processed': 'data/preprocessed',
-    'raw_reviews': 'data/raw/reviews_raw.csv',
-    'processed_reviews': 'data/preprocessed/reviews_processed.csv',
-    'sentiment_results': 'data/preprocessed/reviews_with_sentiment.csv',
-    'final_results': 'data/preprocessed/reviews_final.csv',
-    'app_info': 'data/raw/app_info.csv'  # <-- new entry
+# ============================================================
+# General Settings
+# ============================================================
+
+GENERAL_SETTINGS = {
+    "enable_logging": True,
+    "log_level": "INFO",
+    "timestamp_format": "%Y-%m-%d %H:%M:%S",
 }
+
+# ============================================================
+# Helper: Pretty Print Config
+# ============================================================
+
+
+def print_config_summary() -> None:
+    """Print an overview of the project's configuration for debugging."""
+    print("\n========== CONFIG SUMMARY ==========")
+    print("Project Root:", PROJECT_ROOT)
+    print("Raw Data Path:", DATA_PATHS["raw_reviews"])
+    print("Processed Data Path:", DATA_PATHS["processed_reviews"])
+    print("App Info Path:", DATA_PATHS["app_info"])
+    print("\nApp IDs:", APP_IDS)
+    print("\nScraping Config:", SCRAPING_CONFIG)
+    print("====================================\n")
