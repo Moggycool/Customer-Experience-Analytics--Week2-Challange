@@ -1,0 +1,50 @@
+{
+    // ------------------------------------------
+    // PYTHON INTERPRETER
+    // ------------------------------------------
+    "python.defaultInterpreterPath": "${workspaceFolder}/Myenv/Scripts/python.exe",
+    // ------------------------------------------
+    // DISABLE ALL AUTOMATIC IMPORT ACTIONS
+    // ------------------------------------------
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "never",
+        "source.fixAll": "never"
+    },
+    // VS Code and Pylance import sorting OFF
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.importFormatting": "none",
+    // isort completely disabled
+    "python.sortImports.enabled": false,
+    "python.sortImports.path": [],
+    "python.sortImports.args": [],
+    // ------------------------------------------
+    // FORMATTER SETTINGS (Black)
+    // ------------------------------------------
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=88"
+    ],
+    // ------------------------------------------
+    // LINTING
+    // ------------------------------------------
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ],
+    // ------------------------------------------
+    // TERMINAL SETTINGS
+    // ------------------------------------------
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    // ------------------------------------------
+    // EDITOR (optional preferences)
+    // ------------------------------------------
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+}
