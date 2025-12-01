@@ -62,7 +62,7 @@ BANK_NAMES = {
 # ============================================================
 
 SCRAPING_CONFIG = {
-    "reviews_per_bank": 400,
+    "reviews_per_bank": 600,
     "lang": "en",
     "country_fallback": ["et", "us", "gb"],
     "max_retries": 3,
