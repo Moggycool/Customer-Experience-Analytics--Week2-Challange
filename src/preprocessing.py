@@ -91,13 +91,27 @@ class ReviewPreprocessor:
 
     @staticmethod
     def clean_text(text):
-        """Clean and normalize review text (preserves very short text)."""
+        """
+          Clean and normalize review text.
+
+          - Lowercase
+          - Remove URLs
+          - Remove special characters
+          - Remove all non-English characters (e.g., Amharic)
+          - Normalize whitespace
+          - Preserve very short text
+        """
         if not isinstance(text, str):
-            return ""
+          return ""
         text = text.strip().lower()
+        # Remove URLs
         text = re.sub(r"http\S+|www\.\S+", "", text)
-        text = re.sub(r"[^\w\s.,!?]", " ", text)
-        return re.sub(r"\s+", " ", text).strip()
+        # Remove all characters that are not English letters, numbers, or common punctuation
+        text = re.sub(r"[^a-z0-9\s.,!?]", " ", text)
+        # Normalize spaces
+        text = re.sub(r"\s+", " ", text).strip()
+        return text
+
 
     def normalize_date(self, date_val, median_date):
         """Convert date to ISO format, replace invalid dates with median date."""
