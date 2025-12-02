@@ -93,3 +93,53 @@ This week’s challenge centers on analyzing customer satisfaction with mobile b
 - Frequent commits help track progress and revert changes if needed.
 - Preprocessing ensures clean, normalized, and ready-to-analyze data.
 - Visualizations help understand customer sentiment and review trends per bank.
+```
+Customer-Experience-Analytics--Week2-Challange
+├─ .env
+├─ data
+│  ├─ preprocessed
+│  │  ├─ google_play_processed_reviews.csv
+│  │  ├─ sentiment_analyzed.csv
+│  │  ├─ sentiment_analyzed_report.json
+│  │  ├─ sentiment_analyzed_report_summary.csv
+│  │  ├─ sentiment_analyzed_summary.csv
+│  │  ├─ sentiment_thematic_comparison.csv
+│  │  ├─ thematic_analysis.csv
+│  │  ├─ thematic_analysis_report.json
+│  │  ├─ thematic_metrics.csv
+│  │  └─ thematic_summary.csv
+│  └─ raw
+│     ├─ google_play_app_info.csv
+│     └─ google_play_raw_reviews.csv
+├─ notebooks
+│  ├─ .ipynb_checkpoints
+│  │  └─ sentiment_thematic_eda-checkpoint.ipynb
+│  ├─ data
+│  │  └─ preprocessed
+│  │     └─ analysis_insights.txt
+│  ├─ logs
+│  ├─ preprocessing_eda.ipynb
+│  └─ sentiment_thematic_eda.ipynb
+├─ README.md
+├─ requirements.txt
+├─ scripts
+├─ src
+│  ├─ config.py
+│  ├─ pipeline.py
+│  ├─ preprocessing.py
+│  ├─ scraping.py
+│  ├─ sentiment_analysis.py
+│  ├─ thematic_analysis.py
+│  ├─ __init__.py
+│  └─ __pycache__
+│     ├─ config.cpython-313.pyc
+│     ├─ pipeline.cpython-313.pyc
+│     ├─ preprocessing.cpython-313.pyc
+│     ├─ sentiment_analysis.cpython-313.pyc
+│     ├─ thematic_analysis.cpython-313.pyc
+│     └─ __init__.cpython-313.pyc
+└─ workflows
+   ├─ CI.yml
+   └─ unittest.yml
+
+```

@@ -1,0 +1,1019 @@
+{
+  "timestamp": "2025-12-02T21:56:12.864197",
+  "analysis_method": "distilbert",
+  "confidence_threshold": 0.5,
+  "summary": {
+    "overall": {
+      "total_reviews": 1615,
+      "positive_reviews": 989,
+      "neutral_reviews": 0,
+      "negative_reviews": 626,
+      "positive_percentage": 61.24,
+      "neutral_percentage": 0.0,
+      "negative_percentage": 38.76,
+      "avg_sentiment_score": 0.2273,
+      "avg_positive_score": 0.9872,
+      "avg_negative_score": -0.9734,
+      "sentiment_std": 0.9574,
+      "confidence_threshold": 0.5
+    },
+    "by_rating": {
+      "1": {
+        "total_reviews": 383,
+        "positive_count": 41,
+        "neutral_count": 0,
+        "negative_count": 342,
+        "positive_percentage": 10.704960835509137,
+        "negative_percentage": 89.29503916449086,
+        "avg_sentiment_score": -0.7812953757866244,
+        "sentiment_std": 0.6032313521767679
+      },
+      "2": {
+        "total_reviews": 60,
+        "positive_count": 12,
+        "neutral_count": 0,
+        "negative_count": 48,
+        "positive_percentage": 20.0,
+        "negative_percentage": 80.0,
+        "avg_sentiment_score": -0.5897381494442622,
+        "sentiment_std": 0.789159207270666
+      },
+      "3": {
+        "total_reviews": 82,
+        "positive_count": 29,
+        "neutral_count": 0,
+        "negative_count": 53,
+        "positive_percentage": 35.36585365853659,
+        "negative_percentage": 64.63414634146342,
+        "avg_sentiment_score": -0.29138695902940703,
+        "sentiment_std": 0.943373359130549
+      },
+      "4": {
+        "total_reviews": 102,
+        "positive_count": 60,
+        "neutral_count": 0,
+        "negative_count": 42,
+        "positive_percentage": 58.82352941176471,
+        "negative_percentage": 41.17647058823529,
+        "avg_sentiment_score": 0.17066729945294998,
+        "sentiment_std": 0.9702439383760102
+      },
+      "5": {
+        "total_reviews": 988,
+        "positive_count": 847,
+        "neutral_count": 0,
+        "negative_count": 141,
+        "positive_percentage": 85.72874493927125,
+        "negative_percentage": 14.271255060728743,
+        "avg_sentiment_score": 0.7167488179708782,
+        "sentiment_std": 0.6736541454048054
+      }
+    },
+    "by_bank_and_rating": {
+      "Bank of Abyssinia": {
+        "1": {
+          "total_reviews": 219,
+          "positive_count": 17,
+          "neutral_count": 0,
+          "negative_count": 202,
+          "positive_percentage": 7.76255707762557,
+          "negative_percentage": 92.23744292237443,
+          "avg_sentiment_score": -0.8380004826201696
+        },
+        "2": {
+          "total_reviews": 18,
+          "positive_count": 2,
+          "neutral_count": 0,
+          "negative_count": 16,
+          "positive_percentage": 11.11111111111111,
+          "negative_percentage": 88.88888888888889,
+          "avg_sentiment_score": -0.752302434709337
+        },
+        "3": {
+          "total_reviews": 33,
+          "positive_count": 12,
+          "neutral_count": 0,
+          "negative_count": 21,
+          "positive_percentage": 36.36363636363637,
+          "negative_percentage": 63.63636363636363,
+          "avg_sentiment_score": -0.28171602162447845
+        },
+        "4": {
+          "total_reviews": 22,
+          "positive_count": 9,
+          "neutral_count": 0,
+          "negative_count": 13,
+          "positive_percentage": 40.909090909090914,
+          "negative_percentage": 59.09090909090909,
+          "avg_sentiment_score": -0.18524953452023593
+        },
+        "5": {
+          "total_reviews": 237,
+          "positive_count": 193,
+          "neutral_count": 0,
+          "negative_count": 44,
+          "positive_percentage": 81.43459915611815,
+          "negative_percentage": 18.565400843881857,
+          "avg_sentiment_score": 0.6275961240635642
+        }
+      },
+      "Dashen Bank": {
+        "1": {
+          "total_reviews": 84,
+          "positive_count": 9,
+          "neutral_count": 0,
+          "negative_count": 75,
+          "positive_percentage": 10.714285714285714,
+          "negative_percentage": 89.28571428571429,
+          "avg_sentiment_score": -0.785083776428586
+        },
+        "2": {
+          "total_reviews": 20,
+          "positive_count": 4,
+          "neutral_count": 0,
+          "negative_count": 16,
+          "positive_percentage": 20.0,
+          "negative_percentage": 80.0,
+          "avg_sentiment_score": -0.5962043255567551
+        },
+        "3": {
+          "total_reviews": 23,
+          "positive_count": 7,
+          "neutral_count": 0,
+          "negative_count": 16,
+          "positive_percentage": 30.434782608695656,
+          "negative_percentage": 69.56521739130434,
+          "avg_sentiment_score": -0.37509588314139325
+        },
+        "4": {
+          "total_reviews": 27,
+          "positive_count": 20,
+          "neutral_count": 0,
+          "negative_count": 7,
+          "positive_percentage": 74.07407407407408,
+          "negative_percentage": 25.925925925925924,
+          "avg_sentiment_score": 0.47939972745047676
+        },
+        "5": {
+          "total_reviews": 389,
+          "positive_count": 349,
+          "neutral_count": 0,
+          "negative_count": 40,
+          "positive_percentage": 89.7172236503856,
+          "negative_percentage": 10.282776349614396,
+          "avg_sentiment_score": 0.7960882206808938
+        }
+      },
+      "Commercial Bank of Ethiopia": {
+        "1": {
+          "total_reviews": 80,
+          "positive_count": 15,
+          "neutral_count": 0,
+          "negative_count": 65,
+          "positive_percentage": 18.75,
+          "negative_percentage": 81.25,
+          "avg_sentiment_score": -0.6220873251557351
+        },
+        "2": {
+          "total_reviews": 22,
+          "positive_count": 6,
+          "neutral_count": 0,
+          "negative_count": 16,
+          "positive_percentage": 27.27272727272727,
+          "negative_percentage": 72.72727272727273,
+          "avg_sentiment_score": -0.45085266503420746
+        },
+        "3": {
+          "total_reviews": 26,
+          "positive_count": 10,
+          "neutral_count": 0,
+          "negative_count": 16,
+          "positive_percentage": 38.46153846153847,
+          "negative_percentage": 61.53846153846154,
+          "avg_sentiment_score": -0.22961140825198248
+        },
+        "4": {
+          "total_reviews": 53,
+          "positive_count": 31,
+          "neutral_count": 0,
+          "negative_count": 22,
+          "positive_percentage": 58.490566037735846,
+          "negative_percentage": 41.509433962264154,
+          "avg_sentiment_score": 0.16112757853741916
+        },
+        "5": {
+          "total_reviews": 362,
+          "positive_count": 305,
+          "neutral_count": 0,
+          "negative_count": 57,
+          "positive_percentage": 84.25414364640883,
+          "negative_percentage": 15.745856353591158,
+          "avg_sentiment_score": 0.6898597594124177
+        }
+      }
+    }
+  },
+  "method_comparison": {},
+  "sample_reviews": [
+    {
+      "review_id": "d7273bdf-94a5-4b02-89ec-4a863195ea29",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the underrated app i've ever seen and ur banking system is soo idiocracy",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9977184534072876
+    },
+    {
+      "review_id": "dc201a15-30b2-4d8b-8754-0ecc2db8130b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the app used to run fine, but now it takes like forever to even open the main dashboard and sometimes it just crashes on its own. you guys gotta step it up. we need this app to be way faster",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9726089239120483
+    },
+    {
+      "review_id": "9d5f10f6-476f-4b3d-85f9-7ea5e52bdad7",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "excellent app",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998356103897095
+    },
+    {
+      "review_id": "c47517ad-7dbb-46ed-864d-4b898aff2b23",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "this app doesn't work",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997921586036682
+    },
+    {
+      "review_id": "764b8c59-0297-4141-a7c7-89ed28801671",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "best",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9997941851615906
+    },
+    {
+      "review_id": "3c94365a-df7a-44a6-a947-4e40d575efdc",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "please recover thank you",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9997314810752869
+    },
+    {
+      "review_id": "f402174e-b7fe-45b9-9140-7648c19fdd33",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "please make it functional.",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9997920393943787
+    },
+    {
+      "review_id": "196ffa19-91c5-4f11-9427-cff840f683e1",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "its best app but its don't working in poor connection area so",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9705930948257446
+    },
+    {
+      "review_id": "1bdac495-0844-4896-b693-213485aad561",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "i can't believe in this day and age one of the major banks of the country can't seem to understand that having a working mobile payment option is a must to survive i have decided to move my accounts to cbe and awash because of this can't be bothered with this useless app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9980868101119995
+    },
+    {
+      "review_id": "61368724-0edf-4e9e-89fa-24210bf530ad",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "is it even working these days? please check it.",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9892705678939819
+    },
+    {
+      "review_id": "53214d92-a487-43cb-b69d-b65294b40823",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the app is essentially unusable, it asks to disable developer mode even when it is already disabled and crashes, sometimes it only works with wifi and sometimes only with data, or it crashes just because.......",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9995259046554565
+    },
+    {
+      "review_id": "e4760475-c6dd-4530-8aea-beeef1371e3f",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "miliyone.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9675787687301636
+    },
+    {
+      "review_id": "6d67dca3-b643-462f-bfac-f49811eb1473",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it usually crashes and unable to process also it request to off the developer options",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9996892213821411
+    },
+    {
+      "review_id": "eb3fc431-4145-4276-990f-496c764b7ea7",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "from now on i will never going to use this app, it is a trash app. no one care about this app from bank i will rate them 0 5",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9990705847740173
+    },
+    {
+      "review_id": "402ea96f-df73-4dab-a929-4c66f64adce7",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it is so bad apps ,it doesn't work",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998026490211487
+    },
+    {
+      "review_id": "ecca0ed7-ddf3-4dbe-ba38-145eca8dea76",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "very good app",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998675584793091
+    },
+    {
+      "review_id": "5921455b-b0e2-4cc1-90a3-92ff67166c47",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "good but very slow.",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9877548813819885
+    },
+    {
+      "review_id": "5f80fcab-9967-4c8a-8e42-fe8ecfca0f11",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "error occurred try again for 5 days tele birr user not found",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9988884329795837
+    },
+    {
+      "review_id": "986b160c-cade-4ae5-918e-eddd2802d4d8",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 2,
+      "clean_text": "after update it doesn't work well",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9996452331542969
+    },
+    {
+      "review_id": "9d157253-6414-46f1-a2f3-0867fbd3f25d",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "pretty good for a banking app it still lacks some things with in the ui and with the speed of the app but overall it's a good application thank you 5 5",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9995964169502258
+    },
+    {
+      "review_id": "999a858d-cb31-4660-aba7-ccda89f5e06a",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "too late!",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9988941550254822
+    },
+    {
+      "review_id": "8056e337-2fa8-44c9-9017-083b0009d534",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "no work",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.999386191368103
+    },
+    {
+      "review_id": "94d435e8-8e1a-43e6-8a3c-bd755d66064e",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the app keeps crashing it stops responding while i'm using it or trying to open the app. now i have to go to the bank in person to do any banking activities. in short it is the worst mobile banking system in ethiopia",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997914433479309
+    },
+    {
+      "review_id": "9585bf0d-1dbb-4890-bd88-51cd6f86b0ba",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "useless",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997991919517517
+    },
+    {
+      "review_id": "7bc823fa-4a5e-449b-a505-235522c4c501",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the worst mobile banking app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997923970222473
+    },
+    {
+      "review_id": "0c83e05b-6fa5-425f-9f09-a30947722360",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 3,
+      "clean_text": "it is not fast",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.99720698595047
+    },
+    {
+      "review_id": "db0f8d24-804c-4cf2-8a36-f1f68b6bd616",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "this is the most stupid app i've seen, why would i turn off developer mode just because you can't make your app secure, this clearly indicates the app has very poor implementation and unskilled developers.. there are a lot of people who need developer option for different reasons. please for the sake of the bank, fix this thing... even the most secure international banking apps don't require it. not to mention the lag and crashes",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997655749320984
+    },
+    {
+      "review_id": "e303c5a5-ecd1-4f13-b38c-4b9523bbf321",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it doesn't work",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997813105583191
+    },
+    {
+      "review_id": "b9471f3a-2e46-4397-a4df-f466c05a21cc",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 2,
+      "clean_text": "very poor app. its always cresh and not compatible",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.999818742275238
+    },
+    {
+      "review_id": "e498340e-1663-4ced-83b2-cc2cd8e4e595",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "the new app is very good",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998589754104614
+    },
+    {
+      "review_id": "3af6db50-c93f-4916-bc9b-8ce248f59a4e",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "i can't believe that abyssinia develop this kind of trash app it have a lot of issues",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9988735318183899
+    },
+    {
+      "review_id": "3cc9d24d-ace9-45a4-a843-7750c0babd8d",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it's not functional at all. it keeps saying \"error\". unable to activate.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998112320899963
+    },
+    {
+      "review_id": "3a262ba3-fdc7-4f08-92a4-93b0a862ec2f",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "experienced",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9950610995292664
+    },
+    {
+      "review_id": "e5d0a231-52e9-4fba-8173-ca61c25de63b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "is ok but stop sundenly",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9309313893318176
+    },
+    {
+      "review_id": "a98b2177-e8cf-4818-aa1b-82a1e80df07b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the app is constantly crashing and freezing when to send to boa customers' accounts.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9988401532173157
+    },
+    {
+      "review_id": "421ae4df-7a88-426e-b355-1a437f7f8f3f",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the worst banking app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998050332069397
+    },
+    {
+      "review_id": "b56a3452-b7ca-4299-a268-8bb9e84fb3c5",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "no work app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9968984127044678
+    },
+    {
+      "review_id": "95a7177d-a323-4a17-98ad-9f94ea147686",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the poorest mobile banking survice ever. only error reports frequently",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.999705970287323
+    },
+    {
+      "review_id": "37ed81e2-a945-49be-b1fb-0527a4f8a21d",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "excellent",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998434782028198
+    },
+    {
+      "review_id": "b1ec9a7a-5962-45c7-ac3a-0043f8a96f9e",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it is not working at all",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997811913490295
+    },
+    {
+      "review_id": "29aa3b3c-e4c7-41c7-bbb1-5d514633c307",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "worst app. it is wise to invest money and you can make it like cbe app. even the incon has no image. my app has better ui than yours. so, please invest more and hire professional developer companies and improve it.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9994294047355652
+    },
+    {
+      "review_id": "d7ee5d77-4c89-4e81-a79d-000f5e23c3ac",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the previous application is much better than this one",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9991149306297302
+    },
+    {
+      "review_id": "2a2d15cb-06ba-425c-a417-2f020e552505",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "crashes very frequently is not stable overall need improvement such a huge bank needs a better app than the current one",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.999760091304779
+    },
+    {
+      "review_id": "481a1e89-df8b-43d4-9bf7-aa4a5cd196f5",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the app is not working on android 9.1 at all. it shows an error notification and forcefully closes the app. must be fixed asap.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997739195823669
+    },
+    {
+      "review_id": "e090fd59-6274-4827-8c79-644c6a1f5c73",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "i have experiance",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.8070281147956848
+    },
+    {
+      "review_id": "0b4b949e-9c50-4262-9b4a-fcdd563921ea",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "is not working both this one and apollo did u make it better pls am gonne stop using this bank because of the mobile banking",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9996222257614136
+    },
+    {
+      "review_id": "55a9b559-0322-409d-9973-ebd1f7b5595b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 3,
+      "clean_text": "ahmed mohammed husen",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9124153256416321
+    },
+    {
+      "review_id": "3c4112db-f5c6-4d6c-9df2-de29043c5c14",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "we want international mobile banking",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9587844014167786
+    },
+    {
+      "review_id": "01c3d316-3dbc-4e5c-9a71-8ed4fecc7233",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 2,
+      "clean_text": "screenshot isn't working, please modify it",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9996084570884705
+    },
+    {
+      "review_id": "ac10c99a-bbe4-4a0c-92c3-14e312356969",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "naziriet measho 89160437",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9862651228904724
+    },
+    {
+      "review_id": "22a3c388-07da-4c4b-bfb4-4cfc882733f0",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "okay",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9997709393501282
+    },
+    {
+      "review_id": "b6e1b58d-d5d6-4134-b837-32c4833850ae",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it usually crashes and the reason it gives is a problem on internet connection although the internet was fine.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9991043210029602
+    },
+    {
+      "review_id": "d013e7a7-f3ca-47ec-a3e9-84c741e47b7a",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "fix your apollo you guys where the best",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9973125457763672
+    },
+    {
+      "review_id": "d3a4d1b9-9b82-4760-bd5d-ae4fd3232750",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "always slow and doesn't work on weekends if you are in a rush or a merchant this app is not for you",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9994396567344666
+    },
+    {
+      "review_id": "f9d522b2-ef61-43ea-bdff-9ccf70b88498",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "poor application. it turned off by itself",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997444748878479
+    },
+    {
+      "review_id": "ec8fcf0d-19d7-446f-bd1e-907f91a67b49",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it's very difficult to use the user, app,ones dawenload the user can't operate well , no one can help me,",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997815489768982
+    },
+    {
+      "review_id": "b209e7d6-5e6b-41ca-9658-be1a2a635ccc",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "corrupted and poor app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997439980506897
+    },
+    {
+      "review_id": "39a442aa-c19f-46d0-96f4-fa8efcc622a2",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "good",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998161196708679
+    },
+    {
+      "review_id": "a8eadd54-7005-491c-ae8a-126d371abc3b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "nice",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998552799224854
+    },
+    {
+      "review_id": "1920d8a2-4e03-4818-8a69-7c17c565ae75",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 3,
+      "clean_text": "when i try to use the application it says 'developer setting should be off' where is the setting to off this play still doesn't work for me",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998012185096741
+    },
+    {
+      "review_id": "06f1e24f-10fc-461b-862c-180fb9acf4f4",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "this app didn't work they have a new version new app but still not compatible with my samsung which is v. funny",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9982519745826721
+    },
+    {
+      "review_id": "c8c1d8d1-5304-4e81-a052-f7437a7b341e",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "is this app fake i try it not working it say please try again later, unable to make transactions what is the purpose of this app . if it is not working delete it",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997162222862244
+    },
+    {
+      "review_id": "a185087f-8a27-444a-8646-23f7ab69b205",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "uselss app dont download",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9977203011512756
+    },
+    {
+      "review_id": "76284991-7522-4b59-8bec-ac7afb9b54f0",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "not active",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.999765932559967
+    },
+    {
+      "review_id": "5b46e22e-c7a6-4a66-bd2c-5976bd9a46f9",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "to get good quality",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998683929443359
+    },
+    {
+      "review_id": "e960ae7a-6e14-47e3-83d2-2d9b3f666a01",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it can't even open and only display error messages",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9993472695350647
+    },
+    {
+      "review_id": "3caf7a29-584d-4d26-b615-ed88a0be9da6",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the worst app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997969269752502
+    },
+    {
+      "review_id": "afb68110-3c87-47e8-9fa4-f6cff18e67ea",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "nays",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9894011616706848
+    },
+    {
+      "review_id": "1d426479-7c59-42d4-b349-7bc3afaf374e",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the app does not open sometimes it says coonection issue which i dont have and after it opens it has bugs while using its not smooth to work with please improve it",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9953023195266724
+    },
+    {
+      "review_id": "be349d45-280d-4ecf-8d23-71c407bd38c6",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it's not working totally, what a useless app is it,",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998171925544739
+    },
+    {
+      "review_id": "758affdf-42d5-466d-a18e-4c4bbeb738fd",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "this app has become the most troubling every day. it doesn't work. i love the bank, and i hate the app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9989368319511414
+    },
+    {
+      "review_id": "14bb95be-0bf2-43a7-8757-a4a82eeddd80",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "this is so disappointing app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998049139976501
+    },
+    {
+      "review_id": "03bcdbc8-adcf-4f5d-b155-1001f6debab5",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "not yet completely working this app. i don't know when is it will be working properly! its sad!!!",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9993754029273987
+    },
+    {
+      "review_id": "2bf2f6fe-c408-4a46-9ca9-809df277d9e8",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "poor network",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997891783714294
+    },
+    {
+      "review_id": "95b8d5aa-aa79-40a8-b250-6bf68f7b9782",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 2,
+      "clean_text": "it's not working as it was , so much need to improve, it was the best but not anymore",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9968530535697937
+    },
+    {
+      "review_id": "9813a786-cefe-4a1b-932e-e920944fadec",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "it's a useless app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998058676719666
+    },
+    {
+      "review_id": "612a0e01-ba70-498b-a331-e93ce6adfce0",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "take some note from cbe mobile banking app it's the best banking app currently take some note and improve ur app sometimes u have to learn from the bests",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9978162050247192
+    },
+    {
+      "review_id": "82ae5caf-3c2c-4de2-81fa-6753f32c22a6",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "great",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998630285263062
+    },
+    {
+      "review_id": "b42ad5f5-049c-49dc-a13c-39b7414793d0",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "i don't know what is wrong with boa as a bank in general. it's been going backwards since last year or so. the app is a disaster to use in every possible way. not stable to log in and very slow to perform transactions, couldn't take a screenshot (or can't even find the pictures even using its save screenshot option). most of the time, it fails to perform transactions and so on. simply, it's the worst!",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998201727867126
+    },
+    {
+      "review_id": "7ba41a81-13df-47f6-b720-cb60da94d7e2",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "nice",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998552799224854
+    },
+    {
+      "review_id": "d65cb095-4aad-44b5-ace2-de0e6be51444",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "the previous version is better it doesn't work",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997755885124207
+    },
+    {
+      "review_id": "5af4e484-25a8-4612-a21f-78d14133c52d",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "is it necessary to switch off developer options every time to use mobile banking",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9968350529670715
+    },
+    {
+      "review_id": "c22c687c-b43d-418d-bd9a-c534c12bdee4",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "i mean how could a big financial company like this, be this much irresponsible to release this app? you should be ashamed!",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9994394183158875
+    },
+    {
+      "review_id": "65f4e3f7-9ce6-409d-8f06-4479c3418d3f",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 4,
+      "clean_text": "goood",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9943867921829224
+    },
+    {
+      "review_id": "61776f16-8a06-4dee-bac3-c902ab447b13",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "review",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9946893453598022
+    },
+    {
+      "review_id": "45b0b82d-0f4e-423c-b3d2-6241e89b24bb",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "bad app .",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997915625572205
+    },
+    {
+      "review_id": "9151c064-a00f-4efc-ad7a-1f632401b194",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "this app takes too long time to be opened. and even it is not working simply as other banks application. why this app does not give a digital invoice. even, i am not able to find where the screeshot is kept after transaction. so, please the developer should fix all these.",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9987001419067383
+    },
+    {
+      "review_id": "0ca7af9c-8acd-4e40-a06e-c6e886e84b41",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "good job",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.999835729598999
+    },
+    {
+      "review_id": "03da81fe-f882-4c5f-ab9a-6fe98ff580c7",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "good",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998161196708679
+    },
+    {
+      "review_id": "a675a95c-617f-4cb3-9fe2-2ee0721daa04",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 3,
+      "clean_text": "good",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9998161196708679
+    },
+    {
+      "review_id": "85a692a1-c9ed-4525-a373-8756f3b9724a",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "worst app ever, not user friendly, even doesn't serve basic functionality correctly, takes to much time to login and navigate through the app, we expected more from this bank",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998094439506531
+    },
+    {
+      "review_id": "7e4a7ccf-64df-4cbe-9a5b-f92e188de048",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "gamebela",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.8994190692901611
+    },
+    {
+      "review_id": "56402226-89f9-4f56-9761-e0dfeed5718b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "so poor app to use can't start up when open the app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997444748878479
+    },
+    {
+      "review_id": "98b97eb6-5299-43f7-a372-45b0a486318b",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "a total disaster of an app. always offline, never works, it's embarassing. i've lost hope and taken my business to a competitor",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9998038411140442
+    },
+    {
+      "review_id": "88e2b5f6-040e-452a-9bad-a98caa89cd95",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 3,
+      "clean_text": "harun tamam galanaa",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9410601258277893
+    },
+    {
+      "review_id": "ba879c5c-680b-4f62-867c-3f7e8fd1e694",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "gooood app my dear",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.900593638420105
+    },
+    {
+      "review_id": "91b3d4e5-b3c9-4de6-8bbd-99cfec87e3d0",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 1,
+      "clean_text": "bad app",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.9997212290763855
+    },
+    {
+      "review_id": "501db4c8-f14f-4810-9590-d4ab79be84a2",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "wedi tekle .",
+      "sentiment_label": "negative",
+      "sentiment_score": -0.8421279191970825
+    },
+    {
+      "review_id": "0f22d859-973b-46a7-bf95-4e8e14affd35",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "best app",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.999686598777771
+    },
+    {
+      "review_id": "a7f22b9a-35a4-4bb9-ba49-badf18ba0243",
+      "bank_name": "Bank of Abyssinia",
+      "rating": 5,
+      "clean_text": "nice appp",
+      "sentiment_label": "positive",
+      "sentiment_score": 0.9997910857200623
+    }
+  ]
+}
