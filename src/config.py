@@ -78,6 +78,16 @@ GENERAL_SETTINGS = {
     "log_level": "INFO",
     "timestamp_format": "%Y-%m-%d %H:%M:%S",
 }
+# Pipeline configuration
+PIPELINE_CONFIG = {
+    "enable_validation": True,
+    "enable_feature_generation": True,
+    "enable_export": True,
+    "enable_reporting": True,
+    "export_formats": ["csv", "json", "parquet"],
+    "min_review_length": 3,
+    "max_review_length": 10000,
+}
 
 # ============================================================
 # Helper: Pretty Print Config

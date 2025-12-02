@@ -1,0 +1,35 @@
+================================================================================
+BANK REVIEWS ANALYSIS - KEY INSIGHTS
+================================================================================
+Generated: 2025-12-02 22:09:19
+
+📈 SENTIMENT ANALYSIS
+----------------------------------------
+Total Reviews Analyzed: 1,615
+Positive: 989 (61.2%)
+Negative: 626 (38.8%)
+Average Sentiment Score: 0.227
+
+📊 THEMATIC ANALYSIS
+----------------------------------------
+Reviews with Themes: 1,615 (100.0%)
+
+Top 5 Themes:
+  • Mobile Banking Features: 701 (30.4%)
+  • General Feedback: 635 (27.5%)
+  • Transaction Performance: 230 (10.0%)
+  • App Reliability & Bugs: 230 (10.0%)
+  • Customer Support: 174 (7.5%)
+
+🏦 BANK PERFORMANCE
+----------------------------------------
+Best Performing Bank: Dashen Bank (Score: 0.435)
+Worst Performing Bank: Bank of Abyssinia (Score: -0.117)
+
+🎯 RECOMMENDATIONS
+----------------------------------------
+1. Address themes frequently mentioned in negative reviews
+2. Investigate low-performing banks for systemic issues
+3. Monitor theme trends for proactive improvements
+4. Use sentiment-theme correlation for targeted feature development
+5. Consider A/B testing for high-impact theme improvements

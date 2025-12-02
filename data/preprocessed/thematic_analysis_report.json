@@ -1,0 +1,150 @@
+{
+  "timestamp": "2025-12-02T21:58:40.078457",
+  "summary": {
+    "total_reviews": 1615,
+    "unique_themes": 9,
+    "average_themes_per_review": 1.4272445820433437,
+    "theme_distribution": {
+      "Mobile Banking Features": 701,
+      "General Feedback": 635,
+      "Transaction Performance": 230,
+      "App Reliability & Bugs": 230,
+      "Customer Support": 174,
+      "User Interface & Experience": 166,
+      "Account Access Issues": 92,
+      "Fees & Charges": 42,
+      "Security & Privacy": 35
+    }
+  },
+  "theme_definitions": {
+    "Account Access Issues": "Problems related to logging in, account access, or authentication",
+    "Transaction Performance": "Issues with transaction speed, processing time, or failed transactions",
+    "User Interface & Experience": "Feedback about app design, navigation, and user experience",
+    "Customer Support": "Comments about customer service quality and responsiveness",
+    "App Reliability & Bugs": "Reports of app crashes, errors, bugs, or stability issues",
+    "Mobile Banking Features": "Feedback on mobile-specific features and functionality",
+    "Security & Privacy": "Concerns about data security, privacy, and fraud protection",
+    "Fees & Charges": "Feedback about banking fees, charges, and pricing"
+  },
+  "bank_analysis": {
+    "Bank of Abyssinia": {
+      "total_reviews": 529,
+      "top_themes": {
+        "General Feedback": 223,
+        "Mobile Banking Features": 219,
+        "App Reliability & Bugs": 99,
+        "Transaction Performance": 80,
+        "Customer Support": 47
+      },
+      "theme_examples": {
+        "General Feedback": [
+          "best",
+          "please recover thank you",
+          "is it even working these days? please check it."
+        ],
+        "Mobile Banking Features": [
+          "the underrated app i've ever seen and ur banking system is soo idiocracy",
+          "the app used to run fine, but now it takes like forever to even open the main dashboard and sometime...",
+          "excellent app"
+        ],
+        "App Reliability & Bugs": [
+          "the app used to run fine, but now it takes like forever to even open the main dashboard and sometime...",
+          "the app is essentially unusable, it asks to disable developer mode even when it is already disabled ...",
+          "it usually crashes and unable to process also it request to off the developer options"
+        ],
+        "Transaction Performance": [
+          "the app used to run fine, but now it takes like forever to even open the main dashboard and sometime...",
+          "i can't believe in this day and age one of the major banks of the country can't seem to understand t...",
+          "the app is essentially unusable, it asks to disable developer mode even when it is already disabled ..."
+        ],
+        "Customer Support": [
+          "excellent app",
+          "the app is constantly crashing and freezing when to send to boa customers' accounts.",
+          "excellent"
+        ]
+      },
+      "theme_coverage": 9
+    },
+    "Dashen Bank": {
+      "total_reviews": 543,
+      "top_themes": {
+        "Mobile Banking Features": 293,
+        "General Feedback": 165,
+        "User Interface & Experience": 94,
+        "Transaction Performance": 93,
+        "Customer Support": 78
+      },
+      "theme_examples": {
+        "Mobile Banking Features": [
+          "it's very disappointing fix it as soon as possible not expected from dashin bank fix it",
+          "this app is not working unless you turn off developer mode on your phone. so it takes your rights to...",
+          "i have experienced on using the app of banks in ethiopia, this dashen sup is like old version of the..."
+        ],
+        "General Feedback": [
+          "nice",
+          "real super up",
+          "good"
+        ],
+        "User Interface & Experience": [
+          "this is what we call banking app. as professional i want banking app as simple as this and an app ri...",
+          "dashen bank super app is the most suitable, reliable, and fast digital banking system.",
+          "super easy to use and fast transaction."
+        ],
+        "Transaction Performance": [
+          "it's slow to send otp. it's not reliable. it crushed many times. it needs improvement in many ways",
+          "this is the worst mobile banking experience i ve ever had it doesn t work when you need it and it ra...",
+          "i have experienced on using the app of banks in ethiopia, this dashen sup is like old version of the..."
+        ],
+        "Customer Support": [
+          "i had a disappointing experience with dashen bank's super up service. the app is very slow and takes...",
+          "so far so good their in person customer service is amazing",
+          "the dashen super app delivers a remarkably fast, highly secure, and exceptionally user-friendly expe..."
+        ]
+      },
+      "theme_coverage": 9
+    },
+    "Commercial Bank of Ethiopia": {
+      "total_reviews": 543,
+      "top_themes": {
+        "General Feedback": 247,
+        "Mobile Banking Features": 189,
+        "App Reliability & Bugs": 58,
+        "Transaction Performance": 57,
+        "Customer Support": 49
+      },
+      "theme_examples": {
+        "General Feedback": [
+          "don't work",
+          "best",
+          "okay"
+        ],
+        "Mobile Banking Features": [
+          "it's just a basic app, you could do a lot better i couldn't see my 2 months statement even",
+          "the best of mobile banking in ethiopia",
+          "this is very good app but what is bucket override i don't get"
+        ],
+        "App Reliability & Bugs": [
+          "the cbe mb app is best and updated with so many features from time to time,but it is impossible to d...",
+          "i can't see my old transaction on this bank app just like other banks mobile apps example abissinya,...",
+          "difficult to transfer between accounts even settling tax obligations. system error notification more..."
+        ],
+        "Transaction Performance": [
+          "very poor and even not sho the balance and transaction history",
+          "the cbe mb app is best and updated with so many features from time to time,but it is impossible to d...",
+          "it's a nice app\"and buy to pay then simple for money transaction 10q cbe."
+        ],
+        "Customer Support": [
+          "it is user friendly.",
+          "excellent application, user friendly...nice one",
+          "really excellent"
+        ]
+      },
+      "theme_coverage": 9
+    }
+  },
+  "compliance_check": {
+    "min_400_reviews": true,
+    "min_2_themes_per_bank": true,
+    "theme_examples_provided": true
+  }
+}
