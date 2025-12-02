@@ -62,7 +62,7 @@ BANK_NAMES = {
 # ============================================================
 
 SCRAPING_CONFIG = {
-    "reviews_per_bank": 400,
+    "reviews_per_bank": 600,
     "lang": "en",
     "country_fallback": ["et", "us", "gb"],
     "max_retries": 3,
@@ -77,6 +77,16 @@ GENERAL_SETTINGS = {
     "enable_logging": True,
     "log_level": "INFO",
     "timestamp_format": "%Y-%m-%d %H:%M:%S",
+}
+# Pipeline configuration
+PIPELINE_CONFIG = {
+    "enable_validation": True,
+    "enable_feature_generation": True,
+    "enable_export": True,
+    "enable_reporting": True,
+    "export_formats": ["csv", "json", "parquet"],
+    "min_review_length": 3,
+    "max_review_length": 10000,
 }
 
 # ============================================================
